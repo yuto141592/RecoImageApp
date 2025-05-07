@@ -22,7 +22,7 @@ User = get_user_model()
 @csrf_exempt
 @require_GET
 def supervise(request):
-    return HttpResponse(status=200)
+    return HttpResponse("<h1>RecoImageApp API is running</h1>", content_type="text/html")
 
 # メール認証用関数
 def send_verification_email(user):

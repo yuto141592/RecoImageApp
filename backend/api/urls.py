@@ -9,5 +9,5 @@ urlpatterns = [
     path('signup/', signup),
     path('verify_email/<str:verification_code>/', verify_email),
     path('login/', login_view),
-    path('/', supervise),
+    path('supervise/', supervise),
 ]
