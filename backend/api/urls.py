@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import signup, verify_email, login_view
+from .views import signup, verify_email, login_view, supervise
 
 urlpatterns = [
     # path('greet/', greet_view),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('signup/', signup),
     path('verify_email/<str:verification_code>/', verify_email),
     path('login/', login_view),
+    path('/', supervise),
 ]

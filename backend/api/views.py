@@ -6,6 +6,7 @@ from django.utils.crypto import get_random_string
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404, render
 from django.contrib.auth import get_user_model, authenticate
+from django.views.decorators.http import require_GET
 
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
@@ -17,6 +18,11 @@ import jwt
 import json
 
 User = get_user_model()
+
+@csrf_exempt
+@require_GET
+def supervise(request):
+    return JsonResponse({"status": "ok"}, status=200)
 
 # メール認証用関数
 def send_verification_email(user):
@@ -79,6 +85,7 @@ def verify_email(request, verification_code):
     else:
         # ユーザーが見つからなかった場合
         return JsonResponse({'error': '無効な確認リンクです。'}, status=400)
+        
 
 # ログイン処理
 @api_view(['POST'])
