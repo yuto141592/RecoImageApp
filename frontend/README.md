@@ -72,3 +72,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 <!-- boot -->
 npm start
+
+<!-- vercel -->
+Framework Preset: Create React App
+Build Command: npm run build
+Output Directory: build
+Install Command: npm install
+Environment Variables: 設定なし
