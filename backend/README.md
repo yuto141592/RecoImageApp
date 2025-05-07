@@ -10,3 +10,5 @@ deactivate
 
 <!-- frontend URL -->
 https://reco-image-app.vercel.app/
+
+https://reco-image-app.vercel.app,

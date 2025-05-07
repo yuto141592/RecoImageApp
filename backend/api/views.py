@@ -20,7 +20,6 @@ import json
 User = get_user_model()
 
 @csrf_exempt
-@require_GET
 def supervise(request):
     return HttpResponse("<h1>RecoImageApp API is running</h1>", content_type="text/html")
 
