@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.contrib.auth.models import User
 from django.conf import settings
 from django.core.mail import send_mail
@@ -22,7 +22,7 @@ User = get_user_model()
 @csrf_exempt
 @require_GET
 def supervise(request):
-    return JsonResponse({"status": "ok"}, status=200)
+    return HttpResponse(status=200)
 
 # メール認証用関数
 def send_verification_email(user):
