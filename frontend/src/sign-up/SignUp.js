@@ -133,7 +133,7 @@ export default function SignUp(props) {
     };
   
     try {
-      const response = await fetch('http://localhost:8000/api/signup/', {
+      const response = await fetch(process.env.REACT_APP_API_BASE_URL + '/api/signup/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -24,7 +24,7 @@ def send_verification_email(user):
     user.verification_code = verification_code  # verification_codeをユーザーに保存
     user.save()
 
-    verification_url = f'http://localhost:3000/verify_email/{verification_code}/'  # フロントエンドの認証URL
+    verification_url = f'{settings.API_FRONTEND_URL}/verify_email/{verification_code}/'  # フロントエンドの認証URL
     
     # 認証メールを送信
     send_mail(

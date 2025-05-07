@@ -15,6 +15,8 @@ from pathlib import Path
 from decouple import config
 from dotenv import load_dotenv
 
+API_FRONTEND_URL = os.getenv('API_FRONTEND_URL', 'http://localhost:3000') 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 

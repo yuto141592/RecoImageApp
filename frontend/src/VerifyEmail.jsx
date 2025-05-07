@@ -7,7 +7,7 @@ export default function VerifyEmail() {
   const [message, setMessage] = useState('メール認証を確認しています...');
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/verify_email/${code}/`)
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/verify_email/${code}/`)
       .then(res => res.json())
       .then(data => {
         if (data.message) {
